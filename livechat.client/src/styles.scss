@@ -1,0 +1,27 @@
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@import "colors.scss";
+
+input {
+    height: 2rem;
+    border-radius: 6px;
+    border: 0;
+    box-shadow: #E5E7EB 0px 8px 20px 0px;
+    padding: 0.3rem 0.5rem;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid $gray;
+}
+
+.cdk-overlay-dark-backdrop {
+    background: $purple !important;
+}
+
+.current-user-message {
+    background-color: white;
+}
+
+.end-user-message {
+    background-color: $light-gray;
+}

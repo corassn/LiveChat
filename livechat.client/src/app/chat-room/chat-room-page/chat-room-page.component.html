@@ -1,0 +1,14 @@
+<div class="content" id="chat-content">
+    <button mat-raised-button class="image-button">
+        {{sendImageText}}
+        <mat-icon iconPositionEnd>arrow_right</mat-icon>
+    </button>
+
+    <div>
+        <input matInput type="text" [placeholder]="inputPlaceholder" [(ngModel)]="message"/>
+        <button class="send-button" mat-icon-button aria-label="Send" (click)="send(message)">
+            <mat-icon>arrow_right</mat-icon>
+        </button>
+    </div>
+
+</div>

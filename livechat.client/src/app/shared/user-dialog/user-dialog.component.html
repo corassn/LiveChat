@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-dialog-content>
+    <input type="text" [placeholder]="placeholder" [(ngModel)]="username">
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button class="save-button" mat-button [mat-dialog-close]="username()" [disabled]="!username()">{{saveText}}</button>
+</mat-dialog-actions>
