@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { EffectsModule } from '@ngrx/effects';
     MatDialogModule,
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
+    MatProgressSpinnerModule,
   ],
   providers: [provideHttpClient(),
   {

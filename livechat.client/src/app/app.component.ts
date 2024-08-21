@@ -11,11 +11,15 @@ import { CoreFacade } from './core/core.facade';
 export class AppComponent implements OnInit {
   readonly dialog = inject(MatDialog);
   currentUser = signal('');
+  isLoading: boolean = false;
 
   coreFacade = inject(CoreFacade);
 
   ngOnInit(): void {
     this.openUserDialog();
+    this.coreFacade.isLoading$.subscribe((isLoading) => {
+      this.isLoading = isLoading;
+    });
   }
 
   openUserDialog(): void {

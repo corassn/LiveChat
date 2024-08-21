@@ -1,1 +1,4 @@
-﻿<router-outlet></router-outlet>
+﻿@if(isLoading) {
+<mat-spinner class="spinner"></mat-spinner>
+}
+<router-outlet></router-outlet>

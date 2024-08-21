@@ -6,13 +6,17 @@
 }
 
 .content {
-    background-color: $light-gray;
     height: 100%;
     width: 70%;
     display: flex;
     flex-direction: column;
 
-    .image-button, .send-button {
+    #chat-content {
+        margin-bottom: 8rem;
+    }
+
+    .image-button,
+    .send-button {
         color: $purple;
     }
 
@@ -25,5 +29,15 @@
         right: 2.5rem;
         top: 0.5rem;
 
+    }
+
+    .send-message-section {
+        position: fixed;
+        bottom: 2rem;
+        width: 100%;
+
+        input {
+            width: 70%;
+        }
     }
 }

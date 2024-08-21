@@ -1,14 +1,16 @@
-<div class="content" id="chat-content">
-    <button mat-raised-button class="image-button">
-        {{sendImageText}}
-        <mat-icon iconPositionEnd>arrow_right</mat-icon>
-    </button>
-
-    <div>
-        <input matInput type="text" [placeholder]="inputPlaceholder" [(ngModel)]="message"/>
-        <button class="send-button" mat-icon-button aria-label="Send" (click)="send(message)">
-            <mat-icon>arrow_right</mat-icon>
+<div class="content">
+    <div id="chat-content"></div>
+    <div class="send-message-section">
+        <button mat-raised-button class="image-button" (click)="sendImage()">
+            {{sendImageText}}
+            <mat-icon iconPositionEnd>arrow_right</mat-icon>
         </button>
-    </div>
 
+        <div>
+            <input matInput type="text" [placeholder]="inputPlaceholder" [(ngModel)]="message" />
+            <button class="send-button" mat-icon-button aria-label="Send" [disabled]="!message" (click)="send(message)">
+                <mat-icon>arrow_right</mat-icon>
+            </button>
+        </div>
+    </div>
 </div>
